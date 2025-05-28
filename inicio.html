@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Inventario</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    table {
+      margin-top: 20px;
+      width: 100%;
+    }
+    input.editable {
+      width: 70px;
+    }
+    .actions {
+      margin-top: 15px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Mi Inventario</h2>
+
+  <form id="productForm">
+    <input type="text" id="name" placeholder="Producto" required>
+    <input type="number" id="quantity" placeholder="Cantidad" required>
+    <input type="number" id="price" placeholder="Precio" required>
+    <button type="submit">Añadir producto</button>
+  </form>
+
+  <table border="1">
+    <thead>
+      <tr>
+        <th>Seleccionar</th>
+        <th>Producto</th>
+        <th>Cantidad</th>
+        <th>Precio</th>
+      </tr>
+    </thead>
+    <tbody id="productTable"></tbody>
+  </table>
+
+  <div class="actions">
+    <button onclick="editSelected()">✏️ Editar seleccionado</button>
+    <button id="viewAll">🔍 Ver todos mis productos</button>
+    <button onclick="deleteSelected()">🗑 Eliminar seleccionado</button>
+    <button id="logoutBtn">🚪 Cerrar sesión</button>
+  </div>
+
+  <script src="./inicioFront.js"></script>
+</body>
+</html>
